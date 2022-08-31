@@ -1,35 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Money : MonoBehaviour
 {
-    private static Money instance = null;
-
-    public long gameMoney = 0;
-    public int CharacterLevel = 1;
-
-    void Awake()
+    private Text text;
+    void Start()
     {
-        if (null == instance)
-        {
-            instance = this;
-            DontDestroyOnLoad(this.gameObject);
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
+        text = GetComponent<Text>();
     }
-    public static Money Instance
+
+    // Update is called once per frame
+    void Update()
     {
-        get
-        {
-            if (null == instance)
-            {
-                return null;
-            }
-            return instance;
-        }
+        text.text = GameManager.Instance.gameMoney + "¿ø";
     }
 }
