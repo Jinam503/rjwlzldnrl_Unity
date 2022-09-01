@@ -7,7 +7,7 @@ public class CanClickPage : MonoBehaviour
     private int increase = 1;
     private void Update()
     {
-        increase = GameManager.Instance.CharacterLevel * 150;
+        increase = GameManager.Instance.CharacterLevel * 2;
     }
     public void GetClickMoney()
     {

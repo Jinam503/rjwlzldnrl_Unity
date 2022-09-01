@@ -22,7 +22,7 @@ public class CharacterLevelUp : MonoBehaviour
             ++GameManager.Instance.CharacterLevel;
             GameManager.Instance.gameMoney -= GameManager.Instance.levelUpCost;
             
-            increase *= 1.3f;
+            increase *= 1.2f;
             GameManager.Instance.levelUpCost = (int)increase;
             ++GameManager.Instance.levelUpCost;
         }
